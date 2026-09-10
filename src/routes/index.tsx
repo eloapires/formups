@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
 import heroLaptop from "@/assets/hero-laptop.png";
+import moonAsset from "@/assets/moon.asset.json";
+import spaceGalaxy from "@/assets/space-galaxy.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -114,6 +116,22 @@ function Index() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-surface-inverse text-surface-inverse-foreground">
+          {/* lua ao fundo */}
+          <img
+            aria-hidden
+            src={moonAsset.url}
+            alt=""
+            className="pointer-events-none absolute inset-x-0 top-0 h-[90%] w-full select-none object-cover object-top opacity-70"
+            style={{
+              maskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
+            }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-surface-inverse/40 via-surface-inverse/20 to-surface-inverse"
+          />
+
           {/* grade técnica */}
           <div
             aria-hidden
@@ -142,7 +160,7 @@ function Index() {
             <div className="relative mt-10 sm:mt-4">
               <span
                 aria-hidden
-                className="display-xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-[24vw] leading-none text-surface-inverse-foreground/[0.09]"
+                className="display-xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-[24vw] leading-none text-surface-inverse-foreground/20 [text-shadow:0_0_80px_rgba(255,255,255,0.15)]"
               >
                 formup
               </span>
@@ -291,8 +309,20 @@ function Index() {
         </section>
 
         {/* CONTATO */}
-        <section id="contato" className="bg-surface-inverse text-surface-inverse-foreground">
-          <div className="mx-auto max-w-[1400px] px-6 py-24 sm:py-32">
+        <section id="contato" className="relative overflow-hidden bg-surface-inverse text-surface-inverse-foreground">
+          {/* galáxia ao fundo */}
+          <img
+            aria-hidden
+            src={spaceGalaxy.url}
+            alt=""
+            loading="lazy"
+            className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover opacity-40"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-surface-inverse via-surface-inverse/70 to-surface-inverse/30"
+          />
+          <div className="relative mx-auto max-w-[1400px] px-6 py-24 sm:py-32">
             <span className="label-micro text-surface-inverse-muted">Contato</span>
             <h2 className="display-xl mt-8 text-[13vw] leading-[0.85] sm:text-[9vw]">
               Vamos
