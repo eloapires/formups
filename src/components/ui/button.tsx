@@ -20,6 +20,10 @@ const buttonVariants = cva(
           "bg-primary text-primary-foreground rounded-lg transition-all duration-300 hover:opacity-90",
         hairline:
           "border border-border-strong bg-background text-foreground rounded-lg transition-all duration-300 hover:border-foreground",
+        hairlineInverse:
+          "border border-surface-inverse-foreground/30 bg-transparent text-surface-inverse-foreground rounded-none transition-all duration-300 hover:border-surface-inverse-foreground hover:bg-surface-inverse-foreground/5",
+        inverse:
+          "bg-surface-inverse text-surface-inverse-foreground rounded-none transition-all duration-300 hover:opacity-90",
       },
       size: {
         default: "h-9 px-4 py-2",
