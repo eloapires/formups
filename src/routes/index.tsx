@@ -3,6 +3,8 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
+import heroLaptop from "@/assets/hero-laptop.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -112,22 +114,50 @@ function Index() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-surface-inverse text-surface-inverse-foreground">
-          <div className="mx-auto max-w-[1400px] px-6 pt-32 pb-10 sm:pt-40">
-            <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-surface-inverse-foreground/15 pb-6">
-              <span className="label-micro text-surface-inverse-muted">Landing pages</span>
-              <span className="label-micro text-surface-inverse-muted">Design digital</span>
-              <span className="label-micro text-surface-inverse-muted">2026</span>
+          {/* grade técnica */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 hidden sm:block"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
+              backgroundSize: "25% 33.333%",
+            }}
+          />
+
+          <div className="relative mx-auto max-w-[1400px] px-6 pt-28 sm:pt-32">
+            {/* metadados */}
+            <div className="grid gap-6 border-b border-surface-inverse-foreground/15 pb-6 sm:grid-cols-2">
+              <div className="flex justify-between sm:max-w-xs">
+                <span className="label-micro text-surface-inverse-muted">Web Design</span>
+                <span className="label-micro text-surface-inverse-muted">Landing Pages</span>
+              </div>
+              <div className="flex justify-between sm:justify-self-end sm:min-w-[18rem]">
+                <span className="label-micro text-surface-inverse-muted">formup Studio</span>
+                <span className="label-micro text-surface-inverse-muted">2026</span>
+              </div>
             </div>
 
-            <div className="relative mt-10">
-              <h1 className="display-xl text-center text-[19vw] leading-[0.8] sm:text-[16vw]">
+            {/* wordmark fantasma + notebook */}
+            <div className="relative mt-10 sm:mt-4">
+              <span
+                aria-hidden
+                className="display-xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap text-[24vw] leading-none text-surface-inverse-foreground/[0.09]"
+              >
                 formup
-              </h1>
+              </span>
+              <img
+                src={heroLaptop}
+                alt="Notebook exibindo uma landing page criada pela formup"
+                width={1408}
+                height={1008}
+                className="relative mx-auto w-full max-w-[820px] -rotate-6 drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
+              />
             </div>
 
-            <div className="mt-8 grid gap-10 border-t border-surface-inverse-foreground/15 pt-8 sm:grid-cols-2">
+            <div className="grid gap-10 border-t border-surface-inverse-foreground/15 pt-8 sm:grid-cols-2">
               <div>
-                <p className="max-w-md text-lg leading-snug text-surface-inverse-foreground sm:text-xl">
+                <p className="max-w-md text-lg leading-snug sm:text-xl">
                   Entenda seu cliente.
                   <br />
                   Eleve o seu negócio.
@@ -140,7 +170,7 @@ function Index() {
                   </Button>
                 </div>
               </div>
-              <p className="max-w-md justify-self-end text-sm leading-relaxed text-surface-inverse-muted">
+              <p className="max-w-md justify-self-start text-sm leading-relaxed text-surface-inverse-muted sm:justify-self-end">
                 Interfaces minimalistas, ultra-rápidas e focadas em vendas para pequenos negócios.
                 Precisão de estúdio, sem a lentidão das agências tradicionais.
               </p>
@@ -159,6 +189,7 @@ function Index() {
             </div>
           </div>
         </section>
+
 
         {/* TRABALHOS */}
         <section id="trabalhos" className="border-b border-border">
