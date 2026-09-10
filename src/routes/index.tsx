@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
 import heroLaptop from "@/assets/hero-laptop.png";
+import moonAsset from "@/assets/moon.asset.json";
+import spaceGalaxy from "@/assets/space-galaxy.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -114,6 +116,22 @@ function Index() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-surface-inverse text-surface-inverse-foreground">
+          {/* lua ao fundo */}
+          <img
+            aria-hidden
+            src={moonAsset.url}
+            alt=""
+            className="pointer-events-none absolute inset-x-0 top-0 h-[90%] w-full select-none object-cover object-top opacity-70"
+            style={{
+              maskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 100%)",
+            }}
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-surface-inverse/40 via-surface-inverse/20 to-surface-inverse"
+          />
+
           {/* grade técnica */}
           <div
             aria-hidden
