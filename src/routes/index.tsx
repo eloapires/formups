@@ -129,7 +129,7 @@ function Index() {
                 alt="Celular preto exibindo uma landing page minimalista"
                 width={1200}
                 height={1200}
-                className="pointer-events-none relative mx-auto -mt-[12vw] w-[46%] max-w-[420px] drop-shadow-2xl sm:-mt-[10vw]"
+                className="pointer-events-none relative mx-auto -mt-[15vw] w-[40%] max-w-[360px] drop-shadow-2xl sm:-mt-[13vw]"
               />
             </div>
 
