@@ -3,7 +3,6 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
-import heroMonolith from "@/assets/hero-monolith.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -124,13 +123,6 @@ function Index() {
               <h1 className="display-xl text-center text-[19vw] leading-[0.8] sm:text-[16vw]">
                 formup
               </h1>
-              <img
-                src={heroMonolith}
-                alt="Celular preto exibindo uma landing page minimalista"
-                width={1200}
-                height={1200}
-                className="pointer-events-none relative mx-auto -mt-[15vw] w-[40%] max-w-[360px] drop-shadow-2xl sm:-mt-[13vw]"
-              />
             </div>
 
             <div className="mt-8 grid gap-10 border-t border-surface-inverse-foreground/15 pt-8 sm:grid-cols-2">
