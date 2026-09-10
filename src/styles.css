@@ -60,7 +60,11 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-border-strong: var(--border-strong);
+  --color-surface-inverse: var(--surface-inverse);
+  --color-surface-inverse-foreground: var(--surface-inverse-foreground);
+  --color-surface-inverse-muted: var(--surface-inverse-muted);
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -84,6 +88,9 @@
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.94 0 0);
   --border-strong: oklch(0.87 0 0);
+  --surface-inverse: oklch(0.13 0 0);
+  --surface-inverse-foreground: oklch(0.99 0 0);
+  --surface-inverse-muted: oklch(0.62 0 0);
   --input: oklch(0.94 0 0);
   --ring: oklch(0.18 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -157,4 +164,19 @@
 
 @utility section-divider {
   border-top: 1px solid var(--border);
+}
+
+@utility display-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+@utility label-micro {
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
