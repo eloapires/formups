@@ -3,7 +3,6 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
-import heroMonolith from "@/assets/hero-monolith.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
