@@ -206,7 +206,7 @@ function Index() {
             <div className="mt-10 grid grid-cols-1 border-t border-surface-inverse-foreground/15 sm:grid-cols-3">
               {heroSpecs.map((spec, i) => (
                 <div
-                  key={spec.label}
+                  key={spec.title}
                   className={`py-6 sm:px-8 ${i > 0 ? "border-t border-surface-inverse-foreground/15 sm:border-l sm:border-t-0" : ""} ${i === 0 ? "sm:pl-0" : ""}`}
                 >
                   <p className="display-xl text-xl">{spec.title}</p>
