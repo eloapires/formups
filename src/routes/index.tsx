@@ -3,7 +3,8 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
-import heroLaptop from "@/assets/hero-laptop.png";
+import heroLaptop from "@/assets/hero-laptop-float.png";
+import chromeElement from "@/assets/chrome-element.png";
 import moonAsset from "@/assets/moon.asset.json";
 import spaceGalaxy from "@/assets/space-galaxy.asset.json";
 
@@ -165,11 +166,19 @@ function Index() {
                 formup
               </span>
               <img
+                aria-hidden
+                src={chromeElement}
+                alt=""
+                width={1024}
+                height={1024}
+                className="animate-float pointer-events-none absolute -top-10 right-0 z-10 w-28 select-none opacity-90 sm:-top-16 sm:right-[6%] sm:w-48"
+              />
+              <img
                 src={heroLaptop}
-                alt="Notebook exibindo uma landing page criada pela formup"
-                width={1408}
-                height={1008}
-                className="relative mx-auto w-full max-w-[820px] -rotate-6 drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
+                alt="Notebook exibindo a landing page criada pela formup"
+                width={801}
+                height={786}
+                className="relative mx-auto w-full max-w-[780px] drop-shadow-[0_60px_80px_rgba(0,0,0,0.55)]"
               />
             </div>
 
