@@ -175,10 +175,10 @@ function Index() {
               />
               <img
                 src={heroLaptop}
-                alt="Notebook exibindo uma landing page criada pela formup"
-                width={1200}
-                height={895}
-                className="relative mx-auto w-full max-w-[820px] -rotate-6 drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
+                alt="Notebook exibindo a landing page criada pela formup"
+                width={801}
+                height={786}
+                className="relative mx-auto w-full max-w-[780px] drop-shadow-[0_60px_80px_rgba(0,0,0,0.55)]"
               />
             </div>
 
