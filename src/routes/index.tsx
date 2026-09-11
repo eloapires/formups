@@ -3,8 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
-import heroLaptop from "@/assets/hero-laptop-float.png";
-import chromeElement from "@/assets/chrome-element.png";
+import heroLaptop from "@/assets/hero-laptop-chrome.png";
 import moonAsset from "@/assets/moon.asset.json";
 import spaceGalaxy from "@/assets/space-galaxy.asset.json";
 
@@ -40,9 +39,18 @@ export const Route = createFileRoute("/")({
 });
 
 const heroSpecs = [
-  { value: "48h", label: "Entrega média" },
-  { value: "100", label: "Nota de performance" },
-  { value: "1 clique", label: "Até o WhatsApp" },
+  {
+    title: "Processo ágil",
+    description: "Tiramos sua ideia do papel e colocamos seu negócio online de forma rápida e eficiente.",
+  },
+  {
+    title: "Performance",
+    description: "Páginas leves, responsivas e otimizadas para uma experiência rápida.",
+  },
+  {
+    title: "Contato direto",
+    description: "Seu cliente encontra o que precisa e chega até você em poucos cliques.",
+  },
 ];
 
 const cases = [
@@ -166,28 +174,20 @@ function Index() {
                 formup
               </span>
               <img
-                aria-hidden
-                src={chromeElement}
-                alt=""
-                width={1024}
-                height={1024}
-                className="animate-float pointer-events-none absolute -top-10 right-0 z-10 w-28 select-none opacity-90 sm:-top-16 sm:right-[6%] sm:w-48"
-              />
-              <img
                 src={heroLaptop}
                 alt="Notebook exibindo a landing page criada pela formup"
-                width={801}
-                height={786}
-                className="relative mx-auto w-full max-w-[780px] drop-shadow-[0_60px_80px_rgba(0,0,0,0.55)]"
+                width={1024}
+                height={1024}
+                className="relative mx-auto w-full max-w-[820px] drop-shadow-[0_60px_80px_rgba(0,0,0,0.55)]"
               />
             </div>
 
             <div className="grid gap-10 border-t border-surface-inverse-foreground/15 pt-8 sm:grid-cols-2">
               <div>
                 <p className="max-w-md text-lg leading-snug sm:text-xl">
-                  Entenda seu cliente.
+                  Agilidade sem abrir mão
                   <br />
-                  Eleve o seu negócio.
+                  da qualidade.
                 </p>
                 <div className="mt-7">
                   <Button variant="hairlineInverse" size="xl" asChild>
@@ -198,19 +198,21 @@ function Index() {
                 </div>
               </div>
               <p className="max-w-md justify-self-start text-sm leading-relaxed text-surface-inverse-muted sm:justify-self-end">
-                Interfaces minimalistas, ultra-rápidas e focadas em vendas para pequenos negócios.
-                Precisão de estúdio, sem a lentidão das agências tradicionais.
+                Desenvolvemos páginas com um processo eficiente, pensado para colocar seu
+                negócio online rapidamente.
               </p>
             </div>
 
             <div className="mt-10 grid grid-cols-1 border-t border-surface-inverse-foreground/15 sm:grid-cols-3">
               {heroSpecs.map((spec, i) => (
                 <div
-                  key={spec.label}
+                  key={spec.title}
                   className={`py-6 sm:px-8 ${i > 0 ? "border-t border-surface-inverse-foreground/15 sm:border-l sm:border-t-0" : ""} ${i === 0 ? "sm:pl-0" : ""}`}
                 >
-                  <p className="display-xl text-2xl">{spec.value}</p>
-                  <p className="label-micro mt-2 text-surface-inverse-muted">{spec.label}</p>
+                  <p className="display-xl text-xl">{spec.title}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-surface-inverse-muted">
+                    {spec.description}
+                  </p>
                 </div>
               ))}
             </div>
