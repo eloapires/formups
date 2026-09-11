@@ -180,3 +180,17 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@utility animate-float {
+  animation: float-y 7s ease-in-out infinite;
+}
