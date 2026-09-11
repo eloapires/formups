@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import caseLanchonete from "@/assets/case-lanchonete.jpg";
 import caseDoceria from "@/assets/case-doceria.jpg";
-import heroLaptop from "@/assets/hero-laptop-formup.png";
+import heroLaptop from "@/assets/hero-laptop-float.png";
 import chromeElement from "@/assets/chrome-element.png";
 import moonAsset from "@/assets/moon.asset.json";
 import spaceGalaxy from "@/assets/space-galaxy.asset.json";
