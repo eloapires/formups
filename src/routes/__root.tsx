@@ -94,8 +94,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/formup-icon.png?v=2", type: "image/png" },
-      { rel: "shortcut icon", href: "/formup-icon.png?v=2", type: "image/png" },
+      { rel: "icon", href: "./formup-icon.png?v=3", type: "image/png" },
+      { rel: "shortcut icon", href: "./formup-icon.png?v=3", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
