@@ -7,9 +7,19 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // GitHub Pages hosts this repository at /formups/ rather than at the domain root.
+  vite: {
+    base: "/formups/",
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Generate the landing page as static HTML so GitHub Pages can serve it.
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+      failOnError: true,
+    },
   },
 });
